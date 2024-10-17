@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap");
+
+/* Smaller container styling for centering the content */
+.about-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px; /* Reduce padding */
+  border-radius: 10px;
+  width: 60%; /* Reduce width */
+  max-width: 900px; /* Reduce max width */
+  margin: 0 auto;
+  margin-top: 60px;
+  text-align: center;
+}
+
+/* Flexbox layout to align logo and heading side by side */
+.about-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 15px; /* Reduce gap between logo and heading */
+  margin-bottom: 15px;
+}
+
+/* Smaller heading */
+.about-header h2 {
+  font-family: "Merriweather", serif;
+  font-size: 3rem; /* Decrease size of the heading */
+}
+
+/* Smaller logo */
+.about-header img {
+  width: 120px; /* Reduce logo size */
+  height: auto;
+}
+
+/* Smaller description text */
+.about-container figure figcaption {
+  font-size: 18px; /* Reduce font size of the description */
+  font-family: "Merriweather", serif;
+  text-align: left;
+}
+
+/* Smaller figure images */
+.about-container figure img {
+  width: 250px; /* Reduce figure image sizes */
+  height: auto;
+  margin: 15px 0;
+}
+
+/* Smaller gap for images side by side */
+.image-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px; /* Reduce gap between the images */
+  margin-top: 15px;
+}
+
+/* Full-page background image */
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url("../SaxPics/background.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}

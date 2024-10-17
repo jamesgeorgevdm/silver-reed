@@ -1,0 +1,34 @@
+.container-products {
+  background-image: url("../SaxPics/OIP.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 20px;
+  margin-top: 70px;
+  min-height: 100vh;
+}
+
+.card-img-top {
+  height: 250px; /* Reduce image height */
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 10px; /* Reduce padding */
+}
+
+.card-title {
+  font-size: 1rem; /* Reduce title font size */
+}
+
+.card-text {
+  font-size: 0.9rem; /* Reduce description font size */
+}
+
+h5 {
+  font-size: 1rem; /* Reduce price font size */
+}
+
+.col-md-4 {
+  margin-bottom: 20px; /* Add vertical space between products */
+}

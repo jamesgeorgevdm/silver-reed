@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap");
+
+/* Styling for h1 (separate from the form container) */
+.header-title {
+  text-align: center;
+  font-family: "Merriweather", serif;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 70px;
+  margin-bottom: 50px;
+}
+
+/* Styling for "Silver Reed Saxophone" text */
+.silver-reed {
+  font-family: "Dancing Script", cursive;
+}
+
+/* To center the form in the middle of the page */
+.home-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 30px;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Flexbox for input forms side by side */
+.input-forms {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.form-container {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  width: 48%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-container input {
+  padding: 15px;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  width: 90%;
+}
+
+.form-container button {
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  width: 90%;
+}
+
+/* Full-page background image */
+body {
+  margin: 0;
+  padding: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}

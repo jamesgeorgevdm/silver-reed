@@ -1,0 +1,34 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400&display=swap");
+
+/*Fix the navbar at the top of the page*/
+.navbar {
+  padding-left: 2rem;
+  background-color: blue !important;
+  color: white;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000; /*To keep it above other elements*/
+}
+
+.navbar-brand {
+  font-family: "Dancing Script", cursive;
+  font-size: 2rem;
+  color: white; /*Ensure the text color contrasts with the navbar background*/
+}
+
+.navbar-link {
+  list-style-type: none;
+  display: flex;
+  gap: 50px;
+}
+
+.nav-link {
+  color: white !important;
+  font-size: 1.2rem;
+}
+
+/*Add spacing between the navbar and form*/
+body {
+  margin-top: 60px;
+}
