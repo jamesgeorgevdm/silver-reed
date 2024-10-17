@@ -2,9 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./Navigation.css";
-import TotalPrice from "./TotalPrice";
 
-function Navigation({ totalPrice, username }) {
+function Navigation({ totalPrice }) {
   return (
     <nav className="navbar navbar-expand-lg">
       <Link className="navbar-brand" to="/">
@@ -28,11 +27,9 @@ function Navigation({ totalPrice, username }) {
             </Link>
           </li>
         </ul>
-        {/* Display total price and username if logged in */}
-        {totalPrice > 0 && <TotalPrice totalPrice={totalPrice} />}
-        {username && (
-          <span className="navbar-text ml-auto">Welcome, {username}!</span>
-        )}
+        <Link to="/cart" className="nav-link cart-link">
+          🛒 Cart
+        </Link>
       </div>
     </nav>
   );

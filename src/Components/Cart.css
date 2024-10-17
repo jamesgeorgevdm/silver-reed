@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400&display=swap");
+
+/* Cart container styling */
+.cart {
+  padding: 20px;
+  margin-top: 70px; /* Space below the navbar */
+  background-color: rgba(
+    249,
+    249,
+    249,
+    0.8
+  ); /* Light background color with transparency */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  min-height: 500px; /* Set a minimum height to ensure background visibility */
+}
+
+/* Header styling */
+.cart h2 {
+  font-family: "Dancing Script", cursive;
+  color: #333; /* Dark text color */
+  margin-bottom: 20px; /* Space below the heading */
+}
+
+/* Item list styling */
+.cart ul {
+  list-style-type: none; /* Remove default list styling */
+  padding: 0; /* Remove default padding */
+}
+
+/* Each cart item styling */
+.cart li {
+  margin-bottom: 15px; /* Space between items */
+}
+
+/* Total price styling */
+.cart h3 {
+  font-family: "Dancing Script", cursive;
+  color: #333; /* Dark text color */
+  margin-top: 20px; /* Space above the total price */
+  font-size: 1.5rem; /* Increase font size */
+}

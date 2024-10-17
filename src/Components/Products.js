@@ -1,4 +1,3 @@
-/*Many imports, but I am not sure how else to import all of these pictures */
 import React, { useState } from "react";
 import { Card, Button, Dropdown, DropdownButton } from "react-bootstrap";
 import "./Products.css";
@@ -142,7 +141,7 @@ const products = [
   },
 ];
 
-function Products({ updateTotalPrice }) {
+function Products({ addToCart }) {
   const [selectedColors, setSelectedColors] = useState(
     products.reduce(
       (acc, product) => ({ ...acc, [product.id]: "Select Color" }),
@@ -162,18 +161,16 @@ function Products({ updateTotalPrice }) {
       case "black":
         return { color: "black" };
       case "gold":
-        return { color: "#FFD700" }; //Gold color
+        return { color: "#FFD700" }; // Gold color
       case "silver":
-        return { color: "#C0C0C0" }; //Silver color
+        return { color: "#C0C0C0" }; // Silver color
       default:
-        return { color: "black" }; //Default color
+        return { color: "black" }; // Default color
     }
   };
 
-  const handleBuy = (price) => {
-    /*Removes 'R' and commas, then convert to number*/
-    const numericPrice = parseFloat(price.replace(/R|,/g, ""));
-    updateTotalPrice(numericPrice);
+  const handleBuy = (product) => {
+    addToCart(product); // Call addToCart with the entire product object
   };
 
   return (
@@ -182,8 +179,6 @@ function Products({ updateTotalPrice }) {
         {products.map((product) => (
           <div className="col-md-4" key={product.id}>
             <Card style={{ width: "18rem" }}>
-              {" "}
-              {/*Imported Card and Dropdown from Bootstrap to follow*/}
               <Card.Img variant="top" src={product.image} />
               <Card.Body>
                 <Card.Title>{product.title}</Card.Title>
@@ -194,7 +189,7 @@ function Products({ updateTotalPrice }) {
                     <span style={getColorStyle(selectedColors[product.id])}>
                       {selectedColors[product.id]}
                     </span>
-                  } //Change the title color based on the selected color
+                  }
                 >
                   <Dropdown.Item
                     onClick={() => handleColorChange(product.id, "Black")}
@@ -215,7 +210,7 @@ function Products({ updateTotalPrice }) {
                 <h5>{product.price}</h5>
                 <Button
                   variant="primary"
-                  onClick={() => handleBuy(product.price)}
+                  onClick={() => handleBuy(product)} // Pass the entire product object
                 >
                   Buy
                 </Button>
