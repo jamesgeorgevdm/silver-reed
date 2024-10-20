@@ -1,9 +1,13 @@
 import React from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
+import { useDispatch } from "react-redux";
+import { login } from "../Redux/userSlice"; // Redux login action
 import "./Login.css";
 
-const Login = ({ handleLogin }) => {
+const Login = () => {
+  const dispatch = useDispatch();
+
   const validationSchema = Yup.object({
     email: Yup.string().email("Invalid email format").required("Required"),
     password: Yup.string()
@@ -11,17 +15,18 @@ const Login = ({ handleLogin }) => {
       .required("Required"),
   });
 
+  const handleLogin = (values) => {
+    const firstName = values.email.split("@")[0]; // Extract the first name from the email
+    dispatch(login(firstName)); // Dispatch the login action with the first name
+  };
+
   return (
     <div className="login-form">
       <h2>Login</h2>
       <Formik
         initialValues={{ email: "", password: "" }}
         validationSchema={validationSchema}
-        onSubmit={(values) => {
-          console.log("Login Data:", values);
-          const username = values.email.split("@")[0]; // Extract username from email
-          handleLogin(username); // Pass the username back to App
-        }}
+        onSubmit={handleLogin} // Call handleLogin when the form is submitted
       >
         {() => (
           <Form>

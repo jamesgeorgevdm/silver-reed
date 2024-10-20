@@ -32,3 +32,9 @@
 .body {
   margin-top: 60px;
 }
+
+.navbar-text {
+  margin-left: 300px; /* Adjust as needed to position near the cart */
+  color: white !important;
+  font-size: 1.2rem;
+}

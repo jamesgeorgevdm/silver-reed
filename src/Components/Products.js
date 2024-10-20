@@ -1,4 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { selectColor } from "../Redux/productsSlice"; // Redux action for color selection
+import { addToCart } from "../Redux/cartSlice"; // Redux action to add to cart
 import { Card, Button, Dropdown, DropdownButton } from "react-bootstrap";
 import "./Products.css";
 import YamahaAltoGold from "../SaxPics/YamahaAltoGold.png";
@@ -141,26 +144,12 @@ const products = [
   },
 ];
 
-function Products({ addToCart }) {
-  const [selectedColors, setSelectedColors] = useState(
-    products.reduce((acc, product) => ({ ...acc, [product.id]: null }), {})
-  );
+function Products() {
+  const selectedColors = useSelector((state) => state.products); // Access selected color state
+  const dispatch = useDispatch();
 
   const handleColorChange = (productId, color) => {
-    setSelectedColors((prevColors) => ({
-      ...prevColors,
-      [productId]: color,
-    }));
-  };
-
-  const colorStyles = {
-    black: { color: "black" },
-    silver: { color: "#C0C0C0" },
-    gold: { color: "#FFD700" },
-  };
-
-  const getColorStyle = (color) => {
-    return colorStyles[color?.toLowerCase()] || colorStyles.gold; // Default to gold
+    dispatch(selectColor({ productId, color }));
   };
 
   const handleBuy = (product) => {
@@ -168,7 +157,7 @@ function Products({ addToCart }) {
     if (!selectedColor) {
       alert("Please select a color before adding to the cart.");
     } else {
-      addToCart({ ...product, selectedColor }); // Add selected color to the product object
+      dispatch(addToCart({ ...product, selectedColor }));
     }
   };
 
@@ -185,7 +174,9 @@ function Products({ addToCart }) {
                 <DropdownButton
                   id="dropdown-basic-button"
                   title={
-                    <span style={getColorStyle(selectedColors[product.id])}>
+                    <span
+                      style={{ color: selectedColors[product.id] || "black" }}
+                    >
                       {selectedColors[product.id] || "Select Color"}
                     </span>
                   }
@@ -207,10 +198,7 @@ function Products({ addToCart }) {
                   </Dropdown.Item>
                 </DropdownButton>
                 <h5>{product.price}</h5>
-                <Button
-                  variant="primary"
-                  onClick={() => handleBuy(product)} // Pass the entire product object
-                >
+                <Button variant="primary" onClick={() => handleBuy(product)}>
                   Buy
                 </Button>
               </Card.Body>

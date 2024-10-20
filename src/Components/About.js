@@ -44,7 +44,7 @@ function About() {
           </Figure>
 
           <Figure>
-            <Figure.Image alt="Store interior" src={Store2} />
+            <Figure.Image src={Store2} alt="Store interior" />
             <Figure.Caption>
               Contact us at:{" "}
               <a href="mailto:selmerepo@gmail.com">selmerepo@gmail.com</a> /
