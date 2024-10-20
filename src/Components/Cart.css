@@ -1,42 +1,107 @@
-@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400&display=swap");
+/* General styles for the body or a main container */
+body {
+  margin: 0; /* Remove default margin */
+  background-size: cover; /* Cover the entire page */
+  background-position: center; /* Center the background */
+}
 
-/* Cart container styling */
 .cart {
   padding: 20px;
-  margin-top: 70px; /* Space below the navbar */
   background-color: rgba(
+    248,
     249,
-    249,
-    249,
-    0.8
-  ); /* Light background color with transparency */
-  border-radius: 10px; /* Rounded corners */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-  min-height: 500px; /* Set a minimum height to ensure background visibility */
+    250,
+    0.9
+  ); /* Light background with some transparency */
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  max-width: 800px; /* Max width to limit size */
+  margin: auto; /* Center the cart */
 }
 
-/* Header styling */
-.cart h2 {
-  font-family: "Dancing Script", cursive;
-  color: #333; /* Dark text color */
-  margin-bottom: 20px; /* Space below the heading */
+.cart-items-container {
+  display: flex;
+  flex-direction: column; /* Align items in a column */
+  align-items: flex-start; /* Align to the left */
+  width: 100%; /* Full width of the cart */
 }
 
-/* Item list styling */
-.cart ul {
-  list-style-type: none; /* Remove default list styling */
-  padding: 0; /* Remove default padding */
+.cart-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #dee2e6; /* Border around each item */
+  border-radius: 8px;
+  background-color: #fff; /* White background for items */
+  width: auto; /* Adjust width */
 }
 
-/* Each cart item styling */
-.cart li {
-  margin-bottom: 15px; /* Space between items */
+.cart-item img {
+  margin-right: 15px; /* Space between image and text */
 }
 
-/* Total price styling */
-.cart h3 {
-  font-family: "Dancing Script", cursive;
-  color: #333; /* Dark text color */
-  margin-top: 20px; /* Space above the total price */
-  font-size: 1.5rem; /* Increase font size */
+.cart-item-details {
+  flex-grow: 1; /* Allow details to grow and fill space */
+}
+
+.cart-item button {
+  background-color: #dc3545; /* Bootstrap danger color */
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.cart-total-container {
+  margin-top: 100px;
+  padding: 10px;
+  border: 1px solid #dee2e6; /* Border around total */
+  border-radius: 8px;
+  background-color: #fff; /* White background */
+  width: fit-content; /* Only covers the text */
+  align-self: flex-start; /* Aligns to the left */
+}
+
+.cart-total {
+  margin: 0; /* Remove default margin */
+  font-size: 150%;
+}
+
+.shipping-options-container {
+  margin-top: 20px; /* Space above the shipping options */
+}
+
+.shipping-help-button {
+  background-color: #007bff; /* Bootstrap primary color */
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 10px; /* Space between select and button */
+}
+
+.shipping-help-popup {
+  position: fixed; /* Fixed positioning */
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Center the popup */
+  background-color: white; /* White background for the popup */
+  border: 1px solid #dee2e6; /* Border around the popup */
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000; /* Ensure it appears above other content */
+}
+
+.shipping-help-popup button {
+  background-color: #dc3545; /* Bootstrap danger color */
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px; /* Space above the button */
 }

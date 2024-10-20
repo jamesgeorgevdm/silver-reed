@@ -29,6 +29,6 @@
 }
 
 /* Add spacing between the navbar and form */
-body {
+.body {
   margin-top: 60px;
 }

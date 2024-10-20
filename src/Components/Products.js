@@ -143,10 +143,7 @@ const products = [
 
 function Products({ addToCart }) {
   const [selectedColors, setSelectedColors] = useState(
-    products.reduce(
-      (acc, product) => ({ ...acc, [product.id]: "Select Color" }),
-      {}
-    )
+    products.reduce((acc, product) => ({ ...acc, [product.id]: null }), {})
   );
 
   const handleColorChange = (productId, color) => {
@@ -156,21 +153,23 @@ function Products({ addToCart }) {
     }));
   };
 
+  const colorStyles = {
+    black: { color: "black" },
+    silver: { color: "#C0C0C0" },
+    gold: { color: "#FFD700" },
+  };
+
   const getColorStyle = (color) => {
-    switch (color.toLowerCase()) {
-      case "black":
-        return { color: "black" };
-      case "gold":
-        return { color: "#FFD700" }; // Gold color
-      case "silver":
-        return { color: "#C0C0C0" }; // Silver color
-      default:
-        return { color: "black" }; // Default color
-    }
+    return colorStyles[color?.toLowerCase()] || colorStyles.gold; // Default to gold
   };
 
   const handleBuy = (product) => {
-    addToCart(product); // Call addToCart with the entire product object
+    const selectedColor = selectedColors[product.id];
+    if (!selectedColor) {
+      alert("Please select a color before adding to the cart.");
+    } else {
+      addToCart({ ...product, selectedColor }); // Add selected color to the product object
+    }
   };
 
   return (
@@ -187,7 +186,7 @@ function Products({ addToCart }) {
                   id="dropdown-basic-button"
                   title={
                     <span style={getColorStyle(selectedColors[product.id])}>
-                      {selectedColors[product.id]}
+                      {selectedColors[product.id] || "Select Color"}
                     </span>
                   }
                 >

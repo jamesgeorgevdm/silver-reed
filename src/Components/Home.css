@@ -15,6 +15,9 @@
 /* Styling for "Silver Reed Saxophone" text */
 .silver-reed {
   font-family: "Dancing Script", cursive;
+  font-size: 150%;
+  margin-left: 30px;
+  margin-right: 30px;
 }
 
 /* To center the form in the middle of the page */
@@ -65,6 +68,7 @@
 body {
   margin: 0;
   padding: 0;
+  background-image: url("../SaxPics/background.jpeg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
