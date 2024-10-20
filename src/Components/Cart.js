@@ -31,7 +31,9 @@ function Cart({ cartItems, removeFromCart }) {
   };
 
   return (
-    <div className="cart">
+    <div className="cart-background">
+      {" "}
+      {/* Unique container for the Cart page */}
       <h2>Your Cart</h2>
       {cartItems.length === 0 ? (
         <p>Your cart is empty</p>

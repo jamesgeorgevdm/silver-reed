@@ -34,6 +34,18 @@
   margin: 0 auto;
 }
 
+.home-background {
+  background-image: url("../SaxPics/background.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 /* Flexbox for input forms side by side */
 .input-forms {
   display: flex;
@@ -62,14 +74,4 @@
   padding: 15px 30px;
   font-size: 1.2rem;
   width: 90%;
-}
-
-/* Full-page background image */
-body {
-  margin: 0;
-  padding: 0;
-  background-image: url("../SaxPics/background.jpeg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
 }

@@ -16,6 +16,12 @@
   text-align: center;
 }
 
+.about-background {
+  background-image: url(""); /* No background image for About */
+  background-color: antiquewhite;
+  min-height: 100vh;
+}
+
 /* Flexbox layout to align logo and heading side by side */
 .about-header {
   display: flex;
@@ -61,11 +67,7 @@
   margin-top: 15px;
 }
 
-/* Full-page background image */
-body {
-  margin: 0;
-  padding: 0;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+.about-container {
+  background-image: none; /* No background image in About */
+  background-color: rgba(255, 255, 255, 0.8);
 }

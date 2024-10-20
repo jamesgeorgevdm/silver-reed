@@ -5,7 +5,9 @@ import "./Home.css";
 
 const Home = ({ handleLogin }) => {
   return (
-    <div>
+    <div className="home-background">
+      {" "}
+      {/* Unique container for the Home page */}
       <h1 className="header-title">
         Welcome to the{" "}
         <span className="silver-reed">Silver Reed Saxophone</span> Store
@@ -13,8 +15,7 @@ const Home = ({ handleLogin }) => {
       <div className="home-container">
         <div className="input-forms">
           <div className="form-container">
-            <Login handleLogin={handleLogin} />{" "}
-            {/* Pass handleLogin to Login */}
+            <Login handleLogin={handleLogin} />
           </div>
           <div className="form-container">
             <Registration />
