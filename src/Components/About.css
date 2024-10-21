@@ -17,7 +17,6 @@
 }
 
 .about-background {
-  background-image: url(""); /* No background image for About */
   background-color: antiquewhite;
   min-height: 100vh;
 }

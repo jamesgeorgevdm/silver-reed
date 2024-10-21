@@ -73,6 +73,7 @@
 
 .shipping-options-container {
   margin-top: 20px; /* Space above the shipping options */
+  margin-left: 230px;
 }
 
 .shipping-help-button {
