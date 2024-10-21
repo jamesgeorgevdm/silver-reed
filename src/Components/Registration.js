@@ -28,6 +28,7 @@ const Registration = () => {
   });
 
   return (
+    //No actual registration functionality, but do not think that was required - happy to add if it is needed
     <div className="registration-form">
       <h2>Register</h2>
       <Formik
@@ -86,7 +87,6 @@ const Registration = () => {
                 className="error"
               />
             </div>
-            {/*Not sure if the button is supposed to do anything except console.log, so left it at that*/}
             <button type="submit">Register</button>
           </Form>
         )}

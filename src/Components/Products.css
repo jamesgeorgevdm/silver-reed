@@ -8,27 +8,28 @@
   min-height: 100vh;
 }
 
+/*Card css needed to be specific - was causing issues with general css styles*/
 .card-img-top {
-  height: 250px; /* Reduce image height */
+  height: 250px;
   object-fit: cover;
 }
 
 .card-body {
-  padding: 10px; /* Reduce padding */
+  padding: 10px;
 }
 
 .card-title {
-  font-size: 1rem; /* Reduce title font size */
+  font-size: 1rem;
 }
 
 .card-text {
-  font-size: 0.9rem; /* Reduce description font size */
+  font-size: 0.9rem;
 }
 
 h5 {
-  font-size: 1rem; /* Reduce price font size */
+  font-size: 1rem;
 }
 
 .col-md-4 {
-  margin-bottom: 20px; /* Add vertical space between products */
+  margin-bottom: 20px; /*Adds vertical space between products*/
 }

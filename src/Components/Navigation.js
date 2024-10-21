@@ -5,7 +5,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./Navigation.css";
 
 function Navigation() {
-  const username = useSelector((state) => state.user.username); // Access the username from Redux
+  const username = useSelector((state) => state.user.username); // Accesses the username from Redux
 
   return (
     <nav className="navbar navbar-expand-lg">
@@ -31,7 +31,7 @@ function Navigation() {
           </li>
         </ul>
         <div className="navbar-text">
-          {/* Display welcome message if the user is logged in */}
+          {/* Displays welcome message if the user is logged in */}
           {username && (
             <span>
               Welcome, <b>{username}</b>!

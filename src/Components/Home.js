@@ -13,6 +13,7 @@ const Home = () => {
   };
 
   return (
+    /*Home-page layout*/
     <div className="home-background">
       <h1 className="header-title">
         Welcome to the{" "}

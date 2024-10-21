@@ -152,6 +152,7 @@ function Products() {
     dispatch(selectColor({ productId, color }));
   };
 
+  //Buy function
   const handleBuy = (product) => {
     const selectedColor = selectedColors[product.id];
     if (!selectedColor) {
@@ -164,6 +165,7 @@ function Products() {
   return (
     <div className="container-products">
       <div className="row">
+        {/* Mapped products and colour selectors*/}
         {products.map((product) => (
           <div className="col-md-4" key={product.id}>
             <Card style={{ width: "18rem" }}>

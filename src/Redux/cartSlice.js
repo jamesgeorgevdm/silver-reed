@@ -5,6 +5,7 @@ const initialState = {
   totalPrice: 0,
 };
 
+// Cart slice with add and remove actions
 const cartSlice = createSlice({
   name: "cart",
   initialState,

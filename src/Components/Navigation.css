@@ -21,10 +21,9 @@
   font-size: 1.2rem;
 }
 
-/* Cart link styling */
 .cart-link {
-  margin-left: auto; /* Pushes cart link to the right */
-  font-size: 1.2rem; /* Increases font size for better visibility */
+  margin-left: auto;
+  font-size: 1.2rem;
   margin-right: 40px;
 }
 
@@ -34,7 +33,7 @@
 }
 
 .navbar-text {
-  margin-left: 300px; /* Adjust as needed to position near the cart */
+  margin-left: 300px;
   color: white !important;
   font-size: 1.2rem;
 }

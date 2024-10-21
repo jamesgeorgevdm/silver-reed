@@ -18,6 +18,7 @@ function Cart() {
   };
 
   return (
+    /* Cart (or no cart) and item mapping drawn from Products.js */
     <div className="cart-background">
       <h2>Your Cart</h2>
       {cartItems.length === 0 ? (

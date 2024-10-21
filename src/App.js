@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import { Provider } from "react-redux"; // Import Redux Provider
-import store from "./Redux/store"; // Import the Redux store
+import { Provider } from "react-redux";
+import store from "./Redux/store";
 import Navigation from "./Components/Navigation";
 import Home from "./Components/Home";
 import Products from "./Components/Products";
@@ -9,6 +9,7 @@ import About from "./Components/About";
 import Cart from "./Components/Cart";
 import "bootstrap/dist/css/bootstrap.min.css";
 
+//Final collation of components
 function App() {
   return (
     <Provider store={store}>

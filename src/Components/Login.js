@@ -8,6 +8,7 @@ import "./Login.css";
 const Login = () => {
   const dispatch = useDispatch();
 
+  //Standard validation used
   const validationSchema = Yup.object({
     email: Yup.string().email("Invalid email format").required("Required"),
     password: Yup.string()
