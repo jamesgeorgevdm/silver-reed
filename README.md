@@ -1,70 +1,55 @@
-# Getting Started with Create React App
+# Silver Reed Saxophone Store
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+The **Silver Reed Saxophone Store** is a web-based application built for saxophone enthusiasts looking to purchase a professional/elite model instrument usually only available overseas. Users can browse a wide variety of saxophones, add items to their cart, and proceed with the checkout process. The application also supports user login, where personalized greetings are shown upon login, and is built using React for the front-end and Redux for state management.
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- **Home**: Users can register an account and/or login, which would display a personalized welcome message drawn from their email.
+- **Products**: A page to view all available products where users can customize which colour/material they would like which can be added to the cart by clicking "Buy".
+- **About**: The user can see the company ethos and additional information about our aims, and can find in-store pictures along with an email and phone number for contact details.
+- **Cart**: Users can view the items selected from the previous page and can remove them at will. Shipping options are additionally provided as well as instructions for how the shipping works, and the total price dynamically rendered appears at the bottom of the page for review.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Getting Started
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+To get the application running on your local machine, follow these steps:
 
-### `npm test`
+### Prerequisites
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+You will need to have **Node.js** and **npm** installed on your computer.
 
-### `npm run build`
+### Installation
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. **Clone the repository** to your local machine:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+   ```bash
+   git clone https://github.com/your-username/silver-reed-store.git
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+   ```
 
-### `npm run eject`
+2. **Navigate** to project directory:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+   cd silver-reed-store
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+3. **Install** the necessary dependencies:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+   Run the following in your command terminal: npm install
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+4. **Run the app**:
 
-## Learn More
+Run the following in your command terminal: npm start
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Technologies used
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- **React**
+- **Redux**
+- **React-Redux**
+- **Local State**
+- **Bootstrap**
+- **Yup**
+- **Formik**
 
-### Code Splitting
+## Conclusion
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project was developed as a capstone project for HyperionDev and Stellenbosch University's Web Development Course, and demonstrates a React-based e-commerce platform with Redux state management. It allows users to browse saxophones, manage their cart, and experience personalized login features.
