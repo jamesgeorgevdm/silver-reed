@@ -54,3 +54,12 @@
   margin-bottom: 10px;
   display: block;
 }
+
+.field-touched {
+  border-color: #f39c12; /* Highlight fields that have been touched */
+}
+
+button:disabled {
+  background-color: #ccc; /* Style for disabled button */
+  cursor: not-allowed;
+}
